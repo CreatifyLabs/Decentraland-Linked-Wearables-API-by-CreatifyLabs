@@ -1,0 +1,21 @@
+{
+  "name": "javascript-linked-wearable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "start": "netlify-lambda serve src",
+    "build": "netlify deploy --prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "express": "^4.18.2",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^16.4.2"
+  }
+}
