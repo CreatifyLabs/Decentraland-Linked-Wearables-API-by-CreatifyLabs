@@ -6,16 +6,15 @@ const { singularHelpWomen } = require("./womensingularHelper");
 const { singularHelpMen } = require("./mensingularHelper");
 const app = express();
 const router = express.Router();
-const womenCollection = "metawardrobe-virtual-womens-fashion";
-const menCollection = "metawardrobe-virtual-mens-fashion";
+const womenCollection = "metawardrobe-virtual-women-s-fashion";
+const menCollection = "metawardrobe-virtual-men-s-fashion";
 
 
 
 router.get("/", (req, res) => {
-    res.send("HELLO This decentaland API is created by CreatifyLabs");
+    res.send("Hello This Decentaland Linked Wearables API created by CreatifyLabs");
 });
-/*https://api.steezyarts.com/.netlify/functions/api/registry/metawardrobe-virtual-womens-fashion/
-address/0x403fA2da716CC36DF9eEDBf9c6dd6a9b6B314326/assets/0x4c1573189e308d0a4d8bec421082fa8e39eee58e:2 */
+
 
 router.get(
     "/registry/:collectionName/address/:address/assets/:id",
@@ -43,7 +42,7 @@ router.get(
             console.error(err);
             res.send(
                 JSON.stringify({
-                    address: "0xe9d35942278ba84303954d18fc91fd7166e70c3b",
+                    address: "0x583793583afceeecfd54c2daf33adef80d8e20bf",
                     amount: 0,
                     urn: {
                         decentraland: "",
@@ -105,11 +104,4 @@ router.get(
 
 app.use(`/.netlify/functions/api`, router);
 
-//for local server
-// app.listen(4000, () => {
-//     console.log(`[server]: Server is running at http://localhost:${4000}`);
-// });
-
-
-// Export the app and the serverless function
 module.exports.handler = serverless(app);
