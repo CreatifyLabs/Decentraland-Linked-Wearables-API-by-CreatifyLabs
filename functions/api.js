@@ -11,10 +11,10 @@ const menCollection = "metawardrobe-virtual-men-s-fashion";
 
 
 
-// Serve the same 'index.html' for all routes with an absolute path
-router.get("*", (req, res) => {
-    const indexPath = path.join(__dirname, "dist", "index.html");
-    res.sendFile(indexPath);
+app.use(express.static("dist"));
+
+router.get("/", (req, res) => {
+    res.sendFile(__dirname + "/dist/index.html");
 });
 
 router.get(
