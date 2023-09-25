@@ -11,8 +11,11 @@ const menCollection = "metawardrobe-virtual-men-s-fashion";
 
 
 
+// Serve static files from the "public" directory
+app.use(express.static("public"));
+
 router.get("/", (req, res) => {
-    res.send("Welcome to the Decentraland Linked Wearables API by Creatify Labs!🚀 Visit us at https://www.creatifylabs.com/ and experience the hassle-free way to turn your ideas into NFTs, your way. At Creatify Labs, we handle the tech, design, and marketing - from initial concept to launch. This means you can fully focus on your brilliant ideas and start reaping the profits. Craft your dreams into NFT reality with us today! 🎨💰 #NFTCreation #NFT #CreatifyLabs #DecentralandAPI #Affordable NFT");
+    res.sendFile(__dirname + "/dist/index.html");
 });
 
 
