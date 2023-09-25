@@ -14,8 +14,15 @@ const menCollection = "metawardrobe-virtual-men-s-fashion";
 app.use(express.static("dist"));
 
 router.get("/", (req, res) => {
-    res.sendFile(__dirname + "/dist/index.html");
+    try {
+        res.sendFile(__dirname + "/dist/index.html");
+    } catch (error) {
+        console.error("Error sending index.html:", error);
+        res.status(500).send("Internal Server Error");
+    }
 });
+
+
 
 router.get(
     "/registry/:collectionName/address/:address/assets/:id",
