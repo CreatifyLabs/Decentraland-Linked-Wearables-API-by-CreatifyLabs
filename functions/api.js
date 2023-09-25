@@ -11,15 +11,11 @@ const menCollection = "metawardrobe-virtual-men-s-fashion";
 
 
 
-// Serve static files from the "public" directory
-app.use(express.static("dist"));
-
-// Serve the same 'index.html' for all routes
+// Serve the same 'index.html' for all routes with an absolute path
 router.get("*", (req, res) => {
-    // Use 'path.join' to get the correct file path
-    res.sendFile(path.join(__dirname, "dist", "index.html"));
+    const indexPath = path.join(__dirname, "dist", "index.html");
+    res.sendFile(indexPath);
 });
-
 
 router.get(
     "/registry/:collectionName/address/:address/assets/:id",
