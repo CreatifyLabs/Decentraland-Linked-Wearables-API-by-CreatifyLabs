@@ -5,15 +5,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreatifyLabs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .loader-text-container {
+            position: absolute;
+            top: 3%; 
+            text-align: center; 
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            color: #D1D3FF; 
+            font-size: 30px; 
+            margin-bottom: 25px; 
+        }
+
+        h2 {
+            color: #D1D3FF; 
+            font-size: 35px; 
+            margin-bottom: 15px; 
+        }
+
+        h3 {
+            color: #ffffff; 
+            font-size: 18px; 
+            margin-bottom: 5px; 
+        }
+
+        h4 {
+            color: #ffffff; 
+            font-size: 18px;
+            margin-bottom: 5px; 
+        }
+
+        h5 {
+            color: #ffffff;
+            font-size: 16px; 
+            margin-bottom: 5px; 
+        }
+
+        h6 {
+            color: #ffffff; 
+            font-size: 16px; 
+            margin-bottom: 10px; 
+        }
+        
+        a {
+            color: #ffffff; 
+        }
+
+        a:hover {
+            color: #D1D3FF;
+        }
+
+        .loader-container2 {
+            background-color: #0F1333 !important;
+            backdrop-filter: blur(4px);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            pointer-events: auto; 
+        }
+
+        .smart-page-loader{
+            background: #fefefe00;
+        }
+        .loader2 {
+            width: 215px;
+            height: 215px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, transparent 30%, #e5f403);
+            animation: loader 2s linear infinite;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .loader:before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            bottom: 6px;
+            right: 6px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 1000;
+        }
+
+        .loader:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(45deg, transparent, transparent 30%, #e5f403);
+            border-radius: 50%;
+            z-index: -1; /* Adjusted z-index value */
+            filter: blur(30px);
+        }
+
+        .logofirstloader2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 206px;
+            height: 206px;
+            border-radius: 50%;
+            background: url("https://www.creatifylabs.com/wp-content/uploads/2023/07/cropped-creatifylabs-logo-350-350-1.png") center no-repeat;
+            background-size: cover;
+            z-index: 2;
+        }
+
+        /* Media Queries */
+
+        @media only screen and (max-width: 600px) {
+            /* Phone */
+            .loader-container2 {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logofirstloader2{
+                width: 125px !important;
+                height: 125px !important;
+            }
+            .loader2 {
+                width: 140px !important;
+                height: 140px !important;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* Tablet */
+            .loader-container2 {
+                justify-content: center;
+            }
+            .loader2 {
+                width: 260px;
+                height: 260px;
+            }
+            .logofirstloader2 {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        
+
+    </style>
 </head>
 
 <body>
-    <h1>Hello This Decentaland Linked Wearables API created by <a href="https://www.creatifylabs.com/" target="_blank">CreatifyLabs
+    <div class="loader-container2">
+        <div class="loader2"></div>
+        <div class="logofirstloader2"></div>
+    </div>
+<div class="loader-text-container">
+    <h1>Welcome to the Decentraland Linked Wearables API Created by 🚀 <a href="https://www.creatifylabs.com/" target="_blank">CreatifyLabs
         </a> </h1>
-    <h2>Craft Your Ideas Into NFT Your Way</h2>
-    <h5>Creatify Labs is hassle free way to create & sell NFT. We handle
-        the tech, design, & marketing from initial concept to launch.
-        So you can focus on your ideas & reap profit.</h5>
+    <h2>Craft Your Ideas Into NFT Your Way</h3>
+    <h3>Creatify Labs is hassle free way to create & sell NFT.</h4> 
+    <h4>We handle the tech, design, & marketing from initial concept to launch.</h4>
+    <h5>So you can focus on your ideas & reap profit.</h5>
+    <h6>🎨💰#CreatifyLabs #NFTCreation #NFT #DecentralandAPI #Affordable NFT</h6>
+    </div>
 </body>
 
 </html>
