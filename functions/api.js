@@ -1,5 +1,5 @@
 const express = require("express");
-const serverless = require('serverless-http')
+const serverless = require('serverless-http');
 const { metadrobeWomenHelper } = require("./helperStuff");
 const { metadrobeMenHelper } = require("./menhelperStuff");
 const { singularHelpWomen } = require("./womensingularHelper");
@@ -8,7 +8,6 @@ const app = express();
 const router = express.Router();
 const womenCollection = "metawardrobe-virtual-women-s-fashion";
 const menCollection = "metawardrobe-virtual-men-s-fashion";
-
 
 
 app.use(express.static("dist"));
@@ -21,6 +20,7 @@ router.get("/", (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
+
 
 
 
