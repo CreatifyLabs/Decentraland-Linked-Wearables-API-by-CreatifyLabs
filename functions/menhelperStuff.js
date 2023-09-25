@@ -13,7 +13,7 @@ const metadrobeMenHelper = async (address, collectionName) => {
     let assetNumber = assetList.toNumber()
     let assets = []
     assets.push({
-        id: `0xe9d35942278ba84303954d18fc91fd7166e70c3b: ${assetNumber.toString()}`,
+        id: `0xc37059816b006c099b0cd47e9cf783b0ef9cd4e3: ${assetNumber.toString()}`,
         amount: 1,
         urn: {
             decentraland: `urn:decentraland:matic:collections-thirdparty:${collectionName}:0x6f691a8ae2e7dbf6c0e15f1757ad9b80b01196bf:${assetNumber.toString()}`,

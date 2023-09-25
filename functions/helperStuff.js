@@ -23,7 +23,7 @@ const metadrobeWomenHelper = async (address, collectionName) => {
     let assets = []
     for (let i = 0; i < index.length; i++) {
         assets.push({
-            id: `0x583793583afceeecfd54c2daf33adef80d8e20bf:${amount[i].toString()}`,
+            id: `0x3b316ea40aa28a84ab435e77510ae76a2e8db527:${amount[i].toString()}`,
             amount: 1,
             urn: {
                 decentraland: `urn:decentraland:matic:collections-thirdparty:${collectionName}:0x4c1573189e308d0a4d8bec421082fa8e39eee58e:${totalSupply.toString()}`,

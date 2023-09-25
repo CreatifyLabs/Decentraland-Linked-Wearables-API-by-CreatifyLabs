@@ -12,7 +12,7 @@ const menCollection = "metawardrobe-virtual-men-s-fashion";
 
 
 router.get("/", (req, res) => {
-    res.send("Hello This Decentaland Linked Wearables API created by CreatifyLabs");
+    res.send("Welcome to the Decentraland Linked Wearables API by Creatify Labs!🚀 Visit us at https://www.creatifylabs.com/ and experience the hassle-free way to turn your ideas into NFTs, your way. At Creatify Labs, we handle the tech, design, and marketing - from initial concept to launch. This means you can fully focus on your brilliant ideas and start reaping the profits. Craft your dreams into NFT reality with us today! 🎨💰 #NFTCreation #NFT #CreatifyLabs #DecentralandAPI #Affordable NFT");
 });
 
 
@@ -30,7 +30,7 @@ router.get(
             } else {
                 res.send(
                     JSON.stringify({
-                        address: "0xe9d35942278ba84303954d18fc91fd7166e70c3b",
+                        address: "0x3b316ea40aa28a84ab435e77510ae76a2e8db527",
                         amount: 0,
                         urn: {
                             decentraland: "",
@@ -42,7 +42,7 @@ router.get(
             console.error(err);
             res.send(
                 JSON.stringify({
-                    address: "0x583793583afceeecfd54c2daf33adef80d8e20bf",
+                    address: "0xc37059816b006c099b0cd47e9cf783b0ef9cd4e3",
                     amount: 0,
                     urn: {
                         decentraland: "",
